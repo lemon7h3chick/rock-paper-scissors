@@ -149,3 +149,62 @@ function playRound(humanChoice, computerChoice) {
 
   alert(outcome);
 }
+
+/*
+
+ LOGIC TO PLAY ENTIRE GAME 
+    
+    - Create a function named playGame
+    - Display welcome prompt and the possible choices
+    - Call playRound five times
+    - Create a variable name result
+    - Check if humanScore is equal to computerScore then assign result
+      to "It's a tie! Good Game"
+    - Check if humanScore is less than to computerScore then assign
+      result to "You lose! Try again next time"
+    - Check if humanScore is greater than to computerScore then assign
+      result to "You win! Congratualations"
+    - Show scores and result
+
+*/
+
+function playGame() {
+  alert(`
+    WELCOME TO ROCK, PAPER, SCISSORS!
+
+    You face to a Computer in a 5-round match.
+    The player with the most wins takes the title.
+
+    Available choices: Rock, Paper, Scissors
+  `);
+
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+
+  let result;
+
+  if(humanScore === computerScore) {
+    result = "It's a tie! Good Game";
+  }
+
+  if(humanScore < computerScore) {
+    result = "You lose! Try again next time";
+  }
+
+  if(humanScore > computerScore) {
+    result = "You win! Congratualations";
+  }
+
+  alert(`
+    SCORES
+      You: ${humanScore}
+      Computer: ${computerScore}
+
+      - ${result}
+  `);
+}
+
+playGame();
