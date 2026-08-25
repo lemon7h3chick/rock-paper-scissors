@@ -19,4 +19,20 @@ function getComputerChoice() {
   if(randomNumber === 2) return "scissors";
 }
 
-console.log(getComputerChoice());
+/*
+
+  LOGIC FOR GETTING HUMAN CHOICE 
+
+    - Create a function named getHumanChoice
+    - Create a variable named humanChoice
+    - Ask the user "Enter your choice:" and put answer to humanChoice
+    - Return humanChoice trimmed and in lowercase
+
+*/
+
+function getHumanChoice() {
+  const humanChoice = prompt("Enter your choice:");
+  return humanChoice.trim().toLowerCase();
+}
+
+console.log(getHumanChoice());
