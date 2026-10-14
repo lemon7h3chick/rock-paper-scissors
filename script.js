@@ -14,9 +14,9 @@
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
 
-  if(randomNumber === 0) return "rock";
-  if(randomNumber === 1) return "paper";
-  if(randomNumber === 2) return "scissors";
+  if (randomNumber === 0) return 'rock';
+  if (randomNumber === 1) return 'paper';
+  if (randomNumber === 2) return 'scissors';
 }
 
 /*
@@ -31,7 +31,7 @@ function getComputerChoice() {
 */
 
 function getHumanChoice() {
-  const humanChoice = prompt("Enter your choice:");
+  const humanChoice = prompt('Enter your choice:');
   return humanChoice.trim().toLowerCase();
 }
 
@@ -93,59 +93,59 @@ let computerScore = 0;
 */
 
 function getRockResult(computerChoice) {
-  if(computerChoice === "rock") {
+  if (computerChoice === 'rock') {
     return "It's a tie! Rock loves another Rock";
   }
 
-  if(computerChoice === "paper") {
+  if (computerChoice === 'paper') {
     computerScore++;
-    return "You lose! Rock loses to paper";
+    return 'You lose! Rock loses to paper';
   }
 
-  if(computerChoice === "scissors") {
+  if (computerChoice === 'scissors') {
     humanScore++;
-    return "You win! Rock beats Scissors";
+    return 'You win! Rock beats Scissors';
   }
 }
 
 function getPaperResult(computerChoice) {
-  if(computerChoice === "paper") {
+  if (computerChoice === 'paper') {
     return "It's a tie! Paper loves another Paper";
   }
 
-  if(computerChoice === "scissors") {
+  if (computerChoice === 'scissors') {
     computerScore++;
-    return "You lose! Paper loses to Scissors";
+    return 'You lose! Paper loses to Scissors';
   }
 
-  if(computerChoice === "rock") {
+  if (computerChoice === 'rock') {
     humanScore++;
-    return "You win! Paper beats Rock";
+    return 'You win! Paper beats Rock';
   }
 }
 
 function getScissorsResult(computerChoice) {
-  if(computerChoice === "scissors") {
+  if (computerChoice === 'scissors') {
     return "It's a tie! Scissors loves another Scissors";
   }
 
-  if(computerChoice === "rock") {
+  if (computerChoice === 'rock') {
     computerScore++;
-    return "You lose! Scissors loses to rock";
+    return 'You lose! Scissors loses to rock';
   }
 
-  if(computerChoice === "paper") {
+  if (computerChoice === 'paper') {
     humanScore++;
-    return "You win! Scissors beats Paper";
+    return 'You win! Scissors beats Paper';
   }
 }
 
 function playRound(humanChoice, computerChoice) {
   let outcome;
 
-  if(humanChoice === "rock") outcome = getRockResult(computerChoice);
-  if(humanChoice === "paper") outcome = getPaperResult(computerChoice);
-  if(humanChoice === "scissors") outcome = getScissorsResult(computerChoice);
+  if (humanChoice === 'rock') outcome = getRockResult(computerChoice);
+  if (humanChoice === 'paper') outcome = getPaperResult(computerChoice);
+  if (humanChoice === 'scissors') outcome = getScissorsResult(computerChoice);
 
   alert(outcome);
 }
@@ -186,16 +186,16 @@ function playGame() {
 
   let result;
 
-  if(humanScore === computerScore) {
+  if (humanScore === computerScore) {
     result = "It's a tie! Good Game";
   }
 
-  if(humanScore < computerScore) {
-    result = "You lose! Try again next time";
+  if (humanScore < computerScore) {
+    result = 'You lose! Try again next time';
   }
 
-  if(humanScore > computerScore) {
-    result = "You win! Congratualations";
+  if (humanScore > computerScore) {
+    result = 'You win! Congratualations';
   }
 
   alert(`
